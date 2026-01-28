@@ -1,0 +1,125 @@
+/* ==================================================
+   Jawhara Hamoua — Portfolio Layout (FINAL)
+   Inspired by mattschapman.github.io
+   ================================================== */
+
+/* --- Remove Material header everywhere --- */
+.md-header,
+.md-tabs {
+  display: none !important;
+}
+
+.md-main {
+  margin-top: 0 !important;
+}
+
+.md-container {
+  padding-top: 0 !important;
+}
+
+/* --- Page width & outer spacing --- */
+.md-main__inner {
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  padding: 48px 28px 40px !important;
+}
+
+.md-content__inner {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* --- Global typography (Matt-like) --- */
+.md-typeset {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif !important;
+  font-size: 10px !important;
+  line-height: 1.6 !important;
+}
+
+/* ==================================================
+   Layout
+   ================================================== */
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+/* ==================================================
+   Left column
+   ================================================== */
+
+.profile-pic {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 4px;
+  margin: 12px 0 18px;
+}
+
+.left h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 18px;
+}
+
+.left p {
+  font-size: 0.7rem;
+  color: #777;
+  margin: 0 0 14px;
+}
+
+/* ==================================================
+   Right column
+   ================================================== */
+
+.right h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #444;
+  margin: 0 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+
+.right h3 {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #444;
+  margin: 20px 0 8px;
+}
+
+.right p {
+  font-size: 0.7rem;
+  color: #777;
+  margin: 0 0 14px;
+}
+
+/* Divider between projects */
+.right hr {
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,0.10);
+  margin: 18px 0;
+}
+
+/* Project title links */
+.right h3 a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid transparent;
+}
+
+.right h3 a:hover {
+  border-bottom: 1px solid rgba(0,0,0,0.35);
+}

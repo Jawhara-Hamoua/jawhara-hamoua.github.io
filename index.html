@@ -473,9 +473,19 @@ Pixel-level AUROC comparison across MVTec AD categories. kNN and rFM perform str
 
 <p>
   I built an end-to-end machine learning pipeline using physiological signals from
-  wearable biosensors, including heart rate, electrodermal activity, temperature,
-  blood volume pulse, and accelerometer-derived movement features.
+  wearable biosensors, including heart rate, blood volume pulse, electrodermal
+  activity, skin temperature, and accelerometer-derived movement features.
 </p>
+
+<figure>
+  <img src="projects/ocd-physiological-signals-label-adjustment.png" class="project-figure" alt="Physiological signals with OCD event markers"/>
+  <figcaption>
+    Example of wearable physiological signals with OCD event markers. The visualization shows
+    heart rate, blood volume pulse, electrodermal activity and skin temperature, together with
+    original and adjusted event labels. Label adjustment was used to represent events as short
+    temporal windows rather than isolated button-press timestamps.
+  </figcaption>
+</figure>
 
 <p>
   The method combined <strong>multivariate linear regression</strong> with
@@ -485,27 +495,45 @@ Pixel-level AUROC comparison across MVTec AD categories. kNN and rFM perform str
 </p>
 
 <p>
+  A central part of the project was the design of event-labeling strategies. I compared
+  original event labels, label-adjusted events, and extended label-adjusted events to study
+  how temporal label definitions affect the model's ability to distinguish between events
+  and non-events.
+</p>
+
+<figure>
+  <img src="projects/ocd-timesfm-label-comparison.png" class="project-figure" alt="TimesFM predictions for original and adjusted event labels"/>
+  <figcaption>
+    TimesFM forecast comparison across three event-labeling strategies: original events,
+    label adjustment, and extended label adjustment. The adjusted labels produced clearer
+    separation between event and non-event regions, supporting more reliable event detection.
+  </figcaption>
+</figure>
+
+<p>
   I evaluated the model using precision, recall, F1-score, false discovery rate,
-  point-adjusted evaluation, and window-based event detection. The pipeline was tested
-  on both OCD and non-OCD control participants to study whether high false discovery
-  rates reflected model over-firing or possible underreporting of events.
+  point-adjusted evaluation, and window-based event detection. The evaluation focused
+  especially on reducing false positives, since false event alerts can be problematic in
+  a clinical setting.
 </p>
 
 <p>
   <strong>Key contribution:</strong> Developed a residual-based forecasting framework
   for interpreting physiological event predictions and evaluating model reliability
-  in a clinically sensitive setting.
+  in a clinically sensitive time-series setting.
 </p>
 
 <p>
   <strong>Technical skills:</strong> Python, TimesFM, time-series forecasting,
   linear regression, machine learning, wearable biosensor data, signal processing,
-  model evaluation.
+  event detection, model evaluation.
 </p>
 
 <p>
   <em>Code available upon request due to sensitive health-related data.</em>
 </p>
+
+<hr/>
 
 
 <hr/>

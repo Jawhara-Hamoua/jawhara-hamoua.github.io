@@ -395,6 +395,68 @@
 <div class="right">
   <h2>Selected projects</h2>
 
+
+
+  <h3>Zero-Shot Anomaly Detection with Vision Foundation Models</h3>
+
+<p class="project-tags">
+  <span>Python</span>
+  <span>PyTorch</span>
+  <span>Computer Vision</span>
+  <span>DINOv3</span>
+  <span>Vision Transformers</span>
+  <span>Anomaly Detection</span>
+  <span>MVTec AD</span>
+</p>
+
+<p>
+  Industrial defect detection is challenging because defective examples are often rare,
+  expensive, or unavailable during training. In this project, we investigated whether a
+  frozen vision foundation model could detect and localize defects using only normal images.
+</p>
+
+<p>
+  We built a zero-shot anomaly detection pipeline using DINOv3 patch embeddings. Normal
+  training images were converted into patch-level feature vectors and stored in a memory
+  bank. During inference, each test patch was compared against the normal memory bank, and
+  patches far from normal examples were assigned high anomaly scores.
+</p>
+
+<p>
+  We compared three scoring strategies: <strong>DINOv3 + kNN</strong>,
+  <strong>rFM</strong>, and <strong>WT-Flow</strong>. The methods were evaluated on
+  MVTec AD categories including Carpet, Leather, and Screw, using both image-level
+  detection and pixel-level localization.
+</p>
+
+<figure>
+  <img src="assets/projects/zero-shot-localization.png" class="project-figure"/>
+  <figcaption>
+    Pixel-level anomaly localization. DINOv3+kNN and rFM produce sharp heatmaps that align
+    closely with defect regions, while WT-Flow gives more diffuse localization on texture defects.
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="assets/projects/zero-shot-pixel-auc.png" class="project-figure"/>
+  <figcaption>
+    Pixel-level AUROC comparison across MVTec AD categories. kNN and rFM perform strongly on
+    Carpet and Leather, while WT-Flow performs better on Screw but weaker on texture localization.
+  </figcaption>
+</figure>
+
+<p>
+  <strong>Key result:</strong> DINOv3+kNN and rFM achieved near-perfect pixel-level localization
+  on texture categories such as Carpet and Leather, showing that frozen foundation-model
+  features can be effective for industrial anomaly detection without task-specific training.
+</p>
+
+<p>
+  <a href="https://github.com/Andrejj23/zero-shot-anomaly-detection/">View code on GitHub</a>
+</p>
+
+<hr/>
+
   <h3>OCD event detection from wearable data</h3>
   <p>
     Forecasting physiological stress events using residual modeling
@@ -403,20 +465,6 @@
   <p>
     <a href="https://www.linkedin.com/in/jawhara-hamoua/">View code on github</a>
   </p>
-  <hr/>
-
-  <h3>Stock market forecasting (ARIMA)</h3>
-  <p>
-    Forecasting Danish stock indices with ARIMA models and diagnostics.
-  </p>
-
-  <hr/>
-
-  <h3>Zero-shot anomaly detection</h3>
-  <p>
-    Vision Transformer–based anomaly detection with MLOps pipelines.
-  </p>
-
   <hr/>
 
 </div>

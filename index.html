@@ -458,15 +458,59 @@ Pixel-level AUROC comparison across MVTec AD categories. kNN and rFM perform str
 
 <hr/>
 
-  <h3>OCD event detection from wearable data</h3>
-  <p>
-    Forecasting physiological stress events using residual modeling
-    and TimesFM.
-  </p>
-  <p>
-    <a href="https://www.linkedin.com/in/jawhara-hamoua/">View code on github</a>
-  </p>
-  <hr/>
+<h3>OCD Event Detection and Forecasting from Wearable Physiological Data</h3>
+
+<p>
+  <strong>Bachelor Thesis, Technical University of Denmark (DTU) in collaboration with Gentofte Psychiatric Hospital</strong>
+</p>
+
+<p>
+  OCD-related events are difficult to detect automatically because they are sparse,
+  noisy, and often underreported. In this thesis, I investigated whether wearable
+  physiological time series could be used to forecast event-related deviations in
+  children with OCD.
+</p>
+
+<p>
+  I built an end-to-end machine learning pipeline using physiological signals from
+  wearable biosensors, including heart rate, electrodermal activity, temperature,
+  blood volume pulse, and accelerometer-derived movement features.
+</p>
+
+<p>
+  The method combined <strong>multivariate linear regression</strong> with
+  <strong>TimesFM time-series forecasting</strong>. First, a regression model was used
+  to estimate baseline physiological patterns. The residual deviations from this model
+  were then forecasted with TimesFM to detect potential event-related changes.
+</p>
+
+<p>
+  I evaluated the model using precision, recall, F1-score, false discovery rate,
+  point-adjusted evaluation, and window-based event detection. The pipeline was tested
+  on both OCD and non-OCD control participants to study whether high false discovery
+  rates reflected model over-firing or possible underreporting of events.
+</p>
+
+<p>
+  <strong>Key contribution:</strong> Developed a residual-based forecasting framework
+  for interpreting physiological event predictions and evaluating model reliability
+  in a clinically sensitive setting.
+</p>
+
+<p>
+  <strong>Technical skills:</strong> Python, TimesFM, time-series forecasting,
+  linear regression, machine learning, wearable biosensor data, signal processing,
+  model evaluation.
+</p>
+
+<p>
+  <a href="https://github.com/YOUR-GITHUB-LINK-HERE">View code on GitHub</a>
+</p>
+
+<hr/>
+<p>
+  <em>Code available upon request due to sensitive health-related data.</em>
+</p>
 
 </div>
 
